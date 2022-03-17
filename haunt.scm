@@ -60,4 +60,5 @@
       #:readers (list commonmark-reader)
       #:builders (list (blog #:theme abc-theme)
 		       (static-directory "style")
-		       (static-directory "images")))
+		       (static-directory "images"))
+      #:build-directory "docs")
