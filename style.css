@@ -1,36 +1,195 @@
-body {
-	background-color: #f9f5f5;
-	margin:40px auto;
-	max-width:75%;
-	font-size:18px;
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway"), url("./fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+}
 
+:root {
+	--color-primary: rgb(250 204 21);;
+	--color-secondary: rgb(96 165 250);
+    --color-tertiary: rgb(220 38 38);
+	--color-base:  rgb(24 24 27);
+
+	--fancy-gradient: linear-gradient( 154deg, var(--color-primary) 25%, var(--color-tertiary) 50%, var(--color-secondary) 75%);
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	font-size:16px;
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	color: var(--color-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Raleway;
+	margin: 0;
 }
 
 h1 {
-	text-align: center;
-	color: #161616;
+	font-weight: 900;
 }
 
 h2 {
-	color: #191919;
+	font-weight: 600;
 }
 
-h3 {
-	color: #202020;
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+	padding: 2rem 2rem 0;
 }
 
-h4 {
-	color:#282828;
+@media screen and (min-width: 768px) {
+	.hero,
+	.infos .content,
+	.news {
+		max-width: 640px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.hero,
+	.infos .content,
+	.news {
+		max-width: 768px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.hero,
+	.infos .content,
+	.news {
+		max-width: 1024px;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.hero,
+	.infos .content,
+	.news {
+		max-width: 1290px;
+	}
 }
 
-p, li {
-	color: #222222;
+.hero .hero-title {
+	background-image: var(--fancy-gradient); 
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	font-size: 4rem;
 }
 
-a {
-	color: #203000;
+.hero .hero-subtitle {
+	margin-top: 2rem;
+	color: var(--color-tertiary);
+	margin-bottom: 4rem;
 }
 
-div {
-	color: #212121;
+.btn {
+	display: inline-block;
+	padding: 1rem 3rem;
+	font-size: 1.25rem;
+	border-radius: 9999px;
+	text-decoration: none;
+	font-family: Raleway;
+	font-weight: 800;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-out;
+	transition-property: transform, box-shadow;
+
+	transform: translateY(0);
+	background-color: white;
+	border-style: solid;
+	border-color: var(--color-secondary);
+	border-width: 1px;
+}
+
+.primary {
+	background-color: var(--color-tertiary);
+	color: white;
+	border-color: transparent;
+	border-width: 2px;
+	box-shadow: 0 0.25rem 0.5rem rgba(220 38 38 / 20%);
+}
+
+.primary:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 0.5rem 1rem rgba(220 38 38 / 15%);
+}
+
+.secondary {
+	background-color: var(--color-primary);
+	color: white;
+	border-color: white;
+	border-width: 2px;
+	box-shadow: 0 0.25rem 0.5rem rgb(202 138 4 / 50%);
+}
+
+.small-items {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: flex-start;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+	.small-items {
+		flex-direction: row;
+	}
+}
+
+.top-1 {
+	position: relative;
+	top: -1px;
+}
+
+.bottom-1 {
+	position: relative;
+	bottom: -1px;
+}
+
+svg .bright {
+	fill: white;
+}
+
+.infos {
+	background-color: var(--color-primary); 
+}
+
+.infos .content {
+	padding: 0 2rem;
+}
+
+.news {
+	padding: 4rem 2rem;
+}
+
+.text-lg {
+	font-size: 2rem;
+}
+
+p {
+	line-height: 1.5;
+}
+
+.text-tertiary {
+	color: var(--color-tertiary);
 }
