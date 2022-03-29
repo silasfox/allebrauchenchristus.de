@@ -193,3 +193,9 @@ p {
 .text-tertiary {
 	color: var(--color-tertiary);
 }
+
+.centered {
+	margin:40px auto;
+	max-width:75%;
+	font-size:18px;
+}
