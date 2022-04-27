@@ -88,7 +88,7 @@ h2 {
 }
 
 .hero .hero-title {
-	background-image: var(--fancy-gradient); 
+	background-image: var(--fancy-gradient);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: transparent;
@@ -171,7 +171,7 @@ svg .bright {
 }
 
 .infos {
-	background-color: var(--color-primary); 
+	background-color: var(--color-primary);
 }
 
 .infos .content {
