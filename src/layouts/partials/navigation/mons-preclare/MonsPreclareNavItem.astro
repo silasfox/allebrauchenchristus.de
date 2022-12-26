@@ -1,0 +1,20 @@
+---
+
+const { label, url, isPrimary } = Astro.props
+
+---
+
+<li class="">
+	<a
+		href={ url }
+	  class:list={[ isPrimary ? 'btn primary' : '', 'scroll-menu',
+          'font-display', 'tracking-wide', 'flex', 'py-2', 'text-lg',
+          'font-semibold', 'whitespace-nowrap', 'justify-end',
+          'w-full', 'text-right', isPrimary ? '' : 'hover:text-primary',
+          'lg:ml-7', 'lg:inline-flex', 'lg:py-2', 'lg:font-normal',
+          'lg:w-min', 'xl:ml-10', '2xl:ml-12']}
+	>
+		{ label } 
+	</a>
+</li>
+

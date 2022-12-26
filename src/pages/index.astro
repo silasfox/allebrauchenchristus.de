@@ -1,0 +1,88 @@
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import Feature from "../components/Feature.astro";
+import Text from "../components/Text.astro";
+import LeadForm from "../components/LeadForm.astro";
+---
+
+<Base
+  title="Alle brauchen Christus"
+  description="Der Jugendgottesdienst in Waldbröl"
+  image="/images/alle-brauchen-christus.web"
+>
+  <Hero
+    title="Alle brauchen Christus"
+    subtitle="Der Jugendgottesdienst in Waldbröl"
+    bgImage="start-hero.webp"
+    logo="alle-brauchen-christus.webp"
+  >
+    <div slot="social-proof" class="w-full my-8 text-sm 2xl:text-lg">
+      <div class="text-lg">
+        Der nächste Termin ist<br />
+        <strong>05. Februar 2023</strong> um
+        <strong>18:00 Uhr</strong>
+      </div>
+      <div class="">Alte Rathausstraße 4</div>
+      <div class="">51545 Waldbröl</div>
+    </div>
+    <div slot="ctas" class="flex flex-col gap-y w-full gap-y-4 xl:gap-y-8">
+      <!-- -<a href="https://google.com" class="btn w-full primary font-display">Modellauto zum Kauf anbieten</a>-->
+      <a
+        href="/was-soll-das"
+        class="btn w-full primary font-display md:w-fit md:text-lg 2xl:text-2xl"
+        >Was Du davon hast</a
+      >
+      <!--
+      <div
+        class="secondaries flex flex-col gap-y-4 sm:grid sm:grid-cols-2 sm:gap-x-4 md:flex md:flex-row"
+      >
+        <a
+          href="https://www.ebay.de/str/filacars"
+          class="btn w-full secondary font-display md:w-fit">Zur Location</a
+        >
+        <a
+          href="https://www.ebay-kleinanzeigen.de/s-bestandsliste.html?userId=86998874"
+          class="btn w-full secondary font-display md:w-fit"
+          >Alle Termine</a
+        >
+      </div>-->
+    </div>
+  </Hero>
+  <div class="bg-slate-100 w-full">
+    <Text title="Über Uns" image="bibel.webp">
+      <p>
+        Wir sind ein paar junge Christen aus unterschiedlichen Gemeinden.
+	Wir sind fest davon überzeugt, dass alle Menschen Christus brauchen,
+	weil er der einzige Weg ist, der zu Gott führt.<br />
+	(siehe die Bibel, Johannes 14,6)
+      </p>
+      <p>
+        Unsere Grundlage ist die Bibel.
+      </p>
+      <p>
+        Wir glauben, dass die Bibel Gottes lebendiges und vollständiges Wort ist,
+	dass sie zu 100% wahr ist und Kraft hat,
+	jeden Menschen zu verändern.
+	Wir glauben, dass die Bibel als Gottes Wort immer noch aktuell ist
+	und es auch immer sein wird.
+	Die Bibel gibt uns Antworten auf alle brennenden Fragen des Lebens.
+	Vor allem aber gilt:
+	das Wort Gottes ist die einzige verlässliche Quelle,
+	um Jesus kennen zu lernen.<br />
+	(siehe die Bibel, Hebräer 4,12, Jesaja 40,8, Matthäus 24,35)
+      </p>
+      <p>
+        Unser Wunsch ist es, dass du zu Jesus findest,
+	dass du erkennst, was Jesu Tod und Auferstehung für dein Leben bedeutet,
+	dass du echte Vergebung von ihm erfahren kannst und lernst, ihm nachzufolgen.<br />
+	Dazu wollen wir in regelmäßigen Abständen einen Jugendgottesdienst veranstalten.
+	Nach dem Gottesdienst laden wir jeden herzlich ein, noch zu bleiben um gute Gespräche
+	zu führen, Fragen zu stellen und Gemeinschaft zu haben.
+	Unser Vorhaben liegt ganz in Gottes Händen und soll allein zu seiner Ehre dienen - nicht zu unserer.<br />
+	(siehe Römer 9,16, Kolosser 4,5, Römer 10,14ff, Jeremia 1,7)
+      </p>
+    </Text>
+  </div>
+</Base>
